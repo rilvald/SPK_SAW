@@ -39,19 +39,8 @@ if ($execute2->num_rows == 0){
             echo "<div class=\"group-input\">
                     <label for=\"$data[namaKriteria]\">$data[namaKriteria]</label>
                     <input type='hidden' value=\"$data[id_bobotkriteria]\" name=\"id[]\">
-                    <select class=\"form-custom\" required name=\"bobot[]\" id=\"$data[namaKriteria]\">
-                    <option selected disabled>--Pilih Bobot $data[namaKriteria]--</option>";
-                foreach ($listWeight as $key) {
-                    if ($key['nilai']==$data['bobot']) {
-                        $selected="selected";
-                    }else{
-                        $selected=null;
-                    }
-                    echo "<option $selected value=\"$key[nilai]\">$key[nama]</option>";
-                }
-            echo "</select>
-            </div>
-                ";
+                    <input class=\"form-custom\" type=\"number\" step=\"0.01\" min=\"0\" max=\"1\" required name=\"bobot[]\" id=\"$data[namaKriteria]\" value=\"$data[bobot]\">
+                </div>";
         }
         ?>
     </div>
