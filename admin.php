@@ -15,14 +15,17 @@ require './connect.php';
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 100px; /* Adjust as needed */
+            width: 135px; /* Adjust as needed */
             height: auto;
+        }
+        #logo-header {
+            width: 370px; /* Adjust as needed */
         }
     </style>
 </head>
 <body>
 <header>
-    <img src="asset/image/logo3.png" id="logo-header">
+    <img src="asset/image/logo5.png" id="logo-header">
     <img src="asset/image/top-image.svg" id="hiasan">
 </header>
 <nav>
