@@ -218,17 +218,23 @@ INSERT INTO `supplier` (`id_supplier`, `namaSupplier`) VALUES
 --
 
 CREATE TABLE `user` (
-  `Id_admin` int(3) NOT NULL,
+  `Id_admin` int(3) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
-  `password` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `password` varchar(255) NOT NULL,
+  `role` varchar(30) NOT NULL, -- Tambahkan kolom role
+  PRIMARY KEY (`Id_admin`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`Id_admin`, `username`, `password`) VALUES
-(1, 'admin', '$2y$10$M80eHFnCpX6RzDiN7LfRNeNMmUZM51y4gT9NqnerVnud9onIWBvyq');
+INSERT INTO `user` (`username`, `password`, `role`) VALUES
+('adminpsa', '$2y$10$M80eHFnCpX6RzDiN7LfRNeNMmUZM51y4gT9NqnerVnud9onIWBvyq', 'adminpsa'),
+('adminpba', '$2y$10$M80eHFnCpX6RzDiN7LfRNeNMmUZM51y4gT9NqnerVnud9onIWBvyq', 'adminpba');
+
 
 --
 -- Indexes for dumped tables
@@ -284,12 +290,6 @@ ALTER TABLE `nilai_supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`id_supplier`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`Id_admin`);
 
 --
 -- AUTO_INCREMENT for dumped tables
