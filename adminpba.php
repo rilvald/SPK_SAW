@@ -29,7 +29,7 @@ require './connect.php';
     <img src="asset/image/top-image.svg" id="hiasan">
 </header>
 <nav>
-    <?php include "nav.php"; ?>
+    <?php include "navpba.php"; ?>
 </nav>
 <main>
     <div id="bg-green"></div>

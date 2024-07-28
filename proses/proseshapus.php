@@ -34,4 +34,8 @@ switch ($op){
         $query="DELETE FROM nilai_supplier WHERE id_supplier='$id'";
         $crud->delete($query,$konek);
         break;
+    case 'pengguna':
+        $query="DELETE FROM user WHERE Id_admin='$id'";
+        $crud->delete($query,$konek);
+        break;
 }
